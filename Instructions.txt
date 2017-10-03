@@ -1,0 +1,88 @@
+Instructions
+
+How to use the program:
+
+    1. On the menu bar there's two options "Game" and "About".
+
+       1.1 Game:
+            1.1.1 You restart the game by pressing "New Game".
+            1.1.2 You can toggle between different settings
+                  by pressing "Settings".
+            1.1.3 If you don't know how to play, press "Help".
+            1.1.4 You can quit by pressing "Exit".
+
+       1.2 About:
+            1.2.1 "Credits" tells the basic details about the
+                  creator - such as name, student id, course, email.
+            1.2.2. "Instructions" opens this "README.txt" in a
+                  separate frame in a easily readable format.
+
+    2. Settings window.
+
+       2.1 "Difficulties" frame contains the options from beginner to
+           more advanced.
+       2.2 "Settings" frame holds all the other available options
+           that are available in the game.
+       2.3 Save and Cancel
+            2.3.1 Save option is bound to the key Enter and it writes
+                  selected options into "settings.txt".
+
+                  If errors occur:
+                      - All the settings will be set back to default
+                        and popup will inform the user.
+
+            2.3.2 Cancel will destroy the window and no changes
+                  will happen
+
+    3. The game itself.
+
+       3.1 Information text which starts as "Press any tile to start
+           the game.", encourages and explains information about the
+           flags and whether the game is won or lost.
+       3.2 "Timer" will start to count the seconds after the game has
+           been started - aka any tile has been pressed.
+       3.3 Grid of buttons can result in two different outcomes:
+
+           1. "Victory" popup will appear asking whether player wants
+              to start a new game or not. If not, the buttons will
+              disable.
+
+           2. "Defeat" popup will appear if at any point player hits
+              a mine. Again player can choose whether to start a new
+              game the same way as in "Victory" outcome.
+
+       3.4 "Flag mode" in the downright corner is a checkbox that
+           enables or disables the button flagging.
+
+           2.4.1 Flagging means changing the visual appearance of
+                 the clicked button to "f" instead of an empty
+                 string and vice versa.
+
+       3.5 "Flags remaining" tells the player how many possible flags
+           he/she can place at that given moment. It's equivalent to
+           the number of mines in the field.
+
+
+How to add new features:
+
+    To add new features, we'll just need to add them into "GameData"
+    class's attribute dict.
+    To add new difficulties we also need to update the "mode"
+    attribute for mine and grid details.
+
+
+*NOTES*
+Please do not modify the "settings.txt" file at any point. The only
+way to affect the game is via "Options" within the software.
+
+If the "settings.txt" is removed or is missing at launch or when
+saving options the software will create a new text file with
+the default settings.
+
+*BUGS*
+-During each game launch the way buttons are constructed in the
+ software, the grid might seem lagging and leaking some details about
+ the game grid. Might depend on user's computer.
+-If you drag the Software window outside the display - there's some
+ error with rendering of some list of buttons. May cause some rows of
+ buttons completely disappearing and revealing data about the board.
